@@ -6,11 +6,10 @@ session_start();
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
-		//$cpassword = $_POST['cpassword'];
 
-		if (!empty($user_name) && !empty($password) /*&& !empty($cpassword)*/) {
+		if (!empty($user_name) && !empty($password)) {
 			// save to database
-			$query = "select * from users where user_name = '$user_name' limit 1";
+			$query = "select * from admin_table where user_name = '$user_name' limit 1";
 			$result = mysqli_query($connect, $query);
 			if ($result) {
 				if ($result&&mysqli_num_rows($result) > 0) {
@@ -74,7 +73,7 @@ session_start();
 			<input id="text" type="text" name="user_name" placeholder="Enter your username"><br><br>
 			<input id="text" type="password" name="password" placeholder="Enter your password"><br><br>
 			<button id="button" style="width: 100%; align-self: center; background-color: slateblue;">Login</button><br><br>
-			<h4 style="color: black;">A new customer? <a href="signup.php" style="color: orangered; text-decoration: none;">Register now!</a>
+			<h4 style="color: black;">don't have an account? <a href="signup.php" style="color: orangered; text-decoration: none;">Register now!</a>
 	</div>
 </body>
 </html>
