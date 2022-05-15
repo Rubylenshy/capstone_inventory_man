@@ -31,7 +31,9 @@ session_start();
 	<meta charset="utf-8">
 	<title>Sign Up</title>
 </head>
-<body>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Raleway:wght@500&display=swap');
+	</style>
 	<style type="text/css">
 		#text{
 			height: 25px;
@@ -45,28 +47,28 @@ session_start();
 			padding: 10px;
 			width: 100px;
 			color: white;
-			background-color: darkblue;
 			border: none;
+			font-family:'Railway',sans-serif;
 		}
 
 		#box{
-			background-color: grey;
+			background-color: darkgrey;
 			margin: auto;
 			width: 500px;
 			padding: 50px;
+			border-radius: 10px;
+			font-family: 'Railway', sans-serif;
 		}
 	</style>
 
 	<div id="box">
 		<form method="post">
-			<div style="font-size: 30px;text-align: center;color: white;">Sign Up</div><br>
-			<input id="text" type="text" name="user_name" placeholder="Username"><br><br>
-			<input id="text" type="password" name="password" placeholder="Password"><br><br>
+			<div style="font-size: 30px;text-align: center;color: black;">SIGN UP</div><br>
+			<input id="text" type="text" name="user_name" placeholder="Enter your username"><br><br>
+			<input id="text" type="password" name="password" placeholder="Enter your password"><br><br>
 			<input id="text" type="password" name="password" placeholder="Confirm password"><br><br>
-			<button id="button">Sign Up</button><br><br>
-			<h4 style="color: white;">Do you have an account?</h4>
-			<a href="Login.php">Click to Login</a>
-
+			<button id="button"  style="width: 100%; background-color: slateblue;">Sign Up</button><br><br>
+			<h4 style="color: white; font-style: normal;">do you have an account? <a href="Login.php" style="text-decoration: none; color: orangered;">Click to Login!</a></h4>
 		</form>
 	</div>
 </body>
