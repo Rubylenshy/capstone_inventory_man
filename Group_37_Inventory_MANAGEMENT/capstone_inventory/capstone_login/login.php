@@ -40,6 +40,7 @@ session_start();
 </head>
 <body>
 	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 		#text{
 			height: 25px;
 			border-radius: 5px;
@@ -52,28 +53,28 @@ session_start();
 			padding: 10px;
 			width: 100px;
 			color: white;
-			background-color: darkblue;
 			border: none;
 		}
 
 		#box{
-			background-color: grey;
+			background-color: darkgray;
 			margin: auto;
 			width: 500px;
 			padding: 50px;
+			border-radius: 10px;
+			font-family: 'Railway',sans-serif;
 		}
+
+
 	</style>
 
 	<div id="box">
 		<form method="post">
-			<div style="font-size: 30px;text-align: center;color: white;">Login</div><br>
-			<input id="text" type="text" name="user_name" placeholder="Username"><br><br>
-			<input id="text" type="password" name="password" placeholder="Password"><br><br>
-			<button id="button">Login</button><br><br>
-			<h4 style="color: white;">A new customer?</h4>
-			<a href="signup.php">Click to Sign Up</a>
-
-		</form>
+			<div style="font-size: 30px;text-align: center;color: black;">LOGIN NOW</div><br>
+			<input id="text" type="text" name="user_name" placeholder="Enter your username"><br><br>
+			<input id="text" type="password" name="password" placeholder="Enter your password"><br><br>
+			<button id="button" style="width: 100%; align-self: center; background-color: slateblue;">Login</button><br><br>
+			<h4 style="color: black;">A new customer? <a href="signup.php" style="color: orangered; text-decoration: none;">Register now!</a>
 	</div>
 </body>
 </html>
