@@ -20,8 +20,8 @@ session_start();
 						// re-direction
 						header("Location: index.php");
 						die;
-					}else{
-							echo "Wrong username or password!";
+					}elseif(empty($user_name)&& empty($password)){
+							$error['empty'] = 'Please provide valid information';
 						}
 				}
 			}
@@ -69,11 +69,13 @@ session_start();
 
 	<div id="box">
 		<form method="post">
-			<div style="font-size: 30px;text-align: center;color: black;">LOGIN NOW</div><br>
+			<div style="font-size: 30px; font-weight: bold; text-align: center;color: black;">LOGIN NOW</div><br>
 			<input id="text" type="text" name="user_name" placeholder="Enter your username"><br><br>
 			<input id="text" type="password" name="password" placeholder="Enter your password"><br><br>
+			<p style="color: red;"><?php if(isset($error['user_name'])) echo $error['user_name'];?></p>
 			<button id="button" style="width: 100%; align-self: center; background-color: slateblue;">Login</button><br><br>
 			<h4 style="color: black;">don't have an account? <a href="signup.php" style="color: orangered; text-decoration: none;">Register now!</a>
+			<p style="color; red;"><?php if(isset($error['empty'])) echo $error['empty'];?></p>
 	</div>
 </body>
 </html>
