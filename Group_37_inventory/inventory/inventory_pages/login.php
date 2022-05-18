@@ -1,7 +1,8 @@
 <?php
 session_start();
-	include("connection.php");
-	include("functions.php");
+	include("../includes/connection.php");
+	include("../includes/functions.php");
+
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$user_name = $_POST['user_name'];
@@ -31,8 +32,7 @@ session_start();
 
 ?>
 
-<!DOCTYPE html>
-<html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
@@ -44,7 +44,6 @@ session_start();
 			height: 25px;
 			border-radius: 5px;
 			padding: 4px;
-			border: solid thin #aliceblue;
 			width: 100%;
 		}
 
@@ -52,30 +51,36 @@ session_start();
 			padding: 10px;
 			width: 100px;
 			color: white;
+			border-radius: 6px;
 			border: none;
 		}
-
 		#box{
-			background-color: darkgray;
+			background-color: darkgrey;
 			margin: auto;
-			width: 500px;
+			width: 700px;
 			padding: 50px;
-			border-radius: 10px;
-			font-family: 'Railway',sans-serif;
+			top: 50px;
+			border-radius: 15px;
 		}
 
 
 	</style>
 
-	<div id="box">
+	<div class="container col-lg-5" id="box">
 		<form method="post">
 			<div style="font-size: 30px; font-weight: bold; text-align: center;color: black;">LOGIN NOW</div><br>
-			<input id="text" type="text" name="user_name" placeholder="Enter your username"><br><br>
-			<input id="text" type="password" name="password" placeholder="Enter your password"><br><br>
-			<p style="color: red;"><?php if(isset($error['user_name'])) echo $error['user_name'];?></p>
-			<button id="button" style="width: 100%; align-self: center; background-color: slateblue;">Login</button><br><br>
-			<h4 style="color: black;">don't have an account? <a href="signup.php" style="color: orangered; text-decoration: none;">Register now!</a>
+			<div class="form-group">
+                        <input class="form-control form-control-user" placeholder="Enter your username" name="user_name" type="text" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input minlength="6" class="form-control form-control-user" placeholder="Enter your password" name="password" type="password" value="">
+                    </div>
+			<button id="button" style="width: 100%; align-self: center; background-color: green;">Login</button><br><br>
+			<h5 style="color: black;">don't have an account? <a href="signup.php" style="color: orangered; text-decoration: none;">Register now!</a></h5>
 			<p style="color; red;"><?php if(isset($error['empty'])) echo $error['empty'];?></p>
 	</div>
 </body>
-</html>
+
+<?php
+	include("../includes/footer.php");
+?>

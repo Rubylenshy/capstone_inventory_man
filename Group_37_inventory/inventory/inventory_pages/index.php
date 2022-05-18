@@ -1,7 +1,7 @@
 <?php
 session_start();
-	include("connection.php");
-	include("functions.php");
+	include("../includes/connection.php");
+	include("../includes/functions.php");
 
 	$user_data = check_login($connect);
 
@@ -25,3 +25,7 @@ session_start();
         doloremque ratione. Assumenda, soluta.</p>
 </body>
 </html>
+
+<?php
+	include("../includes/footer.php");
+?>
