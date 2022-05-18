@@ -12,8 +12,9 @@
                 bottom: 0;
                 right: 0;
                 width: calc(100% - 90px);
-                height: 40px;
+                height: 50px;
                 background-color: #e9ecef;
+                font-weight: 500;
                 }
         </style>
     <div>

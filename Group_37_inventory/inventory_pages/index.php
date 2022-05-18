@@ -14,7 +14,6 @@ session_start();
 	<title>Restaurant | Login</title>
 </head>
 <body>
-	<a href="logout.php">Logout</a>
 	<h1>Welcome to your Inventory</h1>
 	<br/>
 	Hello, <?php echo $user_data['user_name'];?>
