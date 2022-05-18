@@ -7,10 +7,12 @@ session_start();
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
 		$cpassword = $_POST['cpassword'];
-		$select = " SELECT * FROM admin_table WHERE password = '$password' && cpassword = '$cpassword' && user_name = '$user_name'";
-
-		$result = mysqli_query($connect, $select);
-		if(mysqli_num_rows($result) > 0){
+		$select_p = " SELECT * FROM admin_table WHERE password = '$password'";
+		$select_cp = " SELECT * FROM admin_table WHERE cpassword = '$cpassword'";
+		$select_u = " SELECT * FROM admin_table WHERE user_name = '$user_name'";
+		
+		$result_u = mysqli_query($connect, $select_u);
+		if(mysqli_num_rows($result_u) > 0){
 
 			$error['u']="Username already exist!";
 
@@ -50,6 +52,7 @@ session_start();
 			padding: 10px;
 			width: 100px;
 			color: white;
+			border-radius: 6px;
 			border: none;
 		}
 
@@ -66,14 +69,15 @@ session_start();
 	<div class="container col-lg-5" id="box">
 		<form method="post" class="form-group">
 			<div style="font-size: 30px; font-weight:bold;text-align: center;color: black;">SIGN UP</div><br>
-			<div class="form-group">
-                        <input class="form-control form-control-user" placeholder="Username" name="user" type="text" autofocus>
+					<div class="form-group">
+                        <input  class="form-control form-control-user" placeholder="Enter your username" name="user_name" type="text"  autofocus>
                     </div>
-                    <div class="form-group">
-                        <input class="form-control form-control-user" placeholder="Password" name="password" type="password" value="">
+                    <p style = "color: red;"><?php if (isset($error['u'])) echo $error['u']; ?></p>
+					<div class="form-group">
+                        <input minlength="6" class="form-control form-control-user" placeholder="Enter your password" name="password" type="password" value="">
                     </div>
 					<div class="form-group">
-                        <input class="form-control form-control-user" placeholder="Password" name="cpassword" type="password" value="">
+                        <input minlength="6" class="form-control form-control-user" placeholder="Re-enter your password" name="cpassword" type="password" value="">
                     </div>
 					<p style = "color: red;"><?php if (isset($error['cp'])) echo $error['cp']; ?></p>
 			<button id="button"  style="width: 100%; background-color: green;">Sign Up</button><br><br>

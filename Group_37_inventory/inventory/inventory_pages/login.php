@@ -51,6 +51,7 @@ session_start();
 			padding: 10px;
 			width: 100px;
 			color: white;
+			border-radius: 6px;
 			border: none;
 		}
 		#box{
@@ -68,9 +69,12 @@ session_start();
 	<div class="container col-lg-5" id="box">
 		<form method="post">
 			<div style="font-size: 30px; font-weight: bold; text-align: center;color: black;">LOGIN NOW</div><br>
-			<input class="form-control"  id="text" type="text" autocomplete="off" name="user_name" placeholder="Enter your username"><br><br>
-			<input class="form-control" id="text" type="password" name="password" placeholder="Enter your password">
-			<span style="color: red;"><?php if(isset($error['user_name'])) echo $error['user_name'];?></span>
+			<div class="form-group">
+                        <input class="form-control form-control-user" placeholder="Enter your username" name="user_name" type="text" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input minlength="6" class="form-control form-control-user" placeholder="Enter your password" name="password" type="password" value="">
+                    </div>
 			<button id="button" style="width: 100%; align-self: center; background-color: green;">Login</button><br><br>
 			<h5 style="color: black;">don't have an account? <a href="signup.php" style="color: orangered; text-decoration: none;">Register now!</a></h5>
 			<p style="color; red;"><?php if(isset($error['empty'])) echo $error['empty'];?></p>
