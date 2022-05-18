@@ -1,9 +1,7 @@
 <?php
 session_start();
 	include("../includes/connection.php");
-	include("../includes/functions.php");
-
-	$user_data = check_login($connect);
+	include("../includes/topbar.php");
 
 ?>
 
@@ -16,7 +14,7 @@ session_start();
 <body>
 	<h1>Welcome to your Inventory</h1>
 	<br/>
-	Hello, <?php echo $user_data['user_name'];?>
+	Hello, Welcome.
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
         Voluptatibus, non. Velit, aut voluptatibus at, 
         sed perspiciatis blanditiis quisquam enim iste <br>

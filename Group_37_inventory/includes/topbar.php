@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include("../includes/connection.php");
     include("../includes/functions.php");
     $user_data = check_login($connect);
@@ -31,7 +30,7 @@
             <!-- Nav Item - User Information -->
         <ul class="navbar-nav ml-auto" style="align-items: center;">        
             <li>       
-                <div class="bg-success">
+                <div class="bg-success" style="border-radius: 5px; border: none;">
                     <a id="logout" class="dropdown-item" href="../inventory_pages/logout.php">Logout</a>
                 </div>
             </li>       
