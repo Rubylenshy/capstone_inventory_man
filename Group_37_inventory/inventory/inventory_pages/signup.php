@@ -1,7 +1,7 @@
 <?php
 session_start();
-	include("connection.php");
-	include("functions.php");
+	include("../includes/connection.php");
+	include("../includes/functions.php");
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$user_name = $_POST['user_name'];
@@ -43,48 +43,47 @@ session_start();
 	<meta charset="utf-8">
 	<title>Sign Up</title>
 </head>
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Raleway:wght@500&display=swap');
-	</style>
+
 	<style type="text/css">
-		#text{
-			height: 25px;
-			border-radius: 5px;
-			padding: 4px;
-			border: solid thin #aliceblue;
-			width: 100%;
-		}
 
 		#button{
 			padding: 10px;
 			width: 100px;
 			color: white;
 			border: none;
-			font-family:'Railway',sans-serif;
 		}
 
 		#box{
 			background-color: darkgrey;
 			margin: auto;
-			width: 500px;
+			width: 700px;
 			padding: 50px;
-			border-radius: 10px;
-			font-family: 'Railway', sans-serif;
+			top: 50px;
+			border-radius: 15px;
 		}
 	</style>
 
-	<div id="box">
-		<form method="post">
+	<div class="container col-lg-5" id="box">
+		<form method="post" class="form-group">
 			<div style="font-size: 30px; font-weight:bold;text-align: center;color: black;">SIGN UP</div><br>
-			<input id="text" type="text" name="user_name" placeholder="Enter your username"><br><br>
-			<p style = "color: red;"><?php if (isset($error['u'])) echo $error['u']; ?></p>
-			<input id="text" type="password" name="password" placeholder="Enter your password" minlength ="6"><br><br>
-			<input id="text" type="password" name="cpassword" placeholder="Confirm password"><br><br>
-			<p style = "color: red;"><?php if (isset($error['cp'])) echo $error['cp']; ?></p>
-			<button id="button"  style="width: 100%; background-color: slateblue;">Sign Up</button><br><br>
-			<h4 style="color: white; font-style: normal;">do you have an account? <a href="Login.php" style="text-decoration: none; color: orangered;">Click to Login!</a></h4>
+			<div class="form-group">
+                        <input class="form-control form-control-user" placeholder="Username" name="user" type="text" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-user" placeholder="Password" name="password" type="password" value="">
+                    </div>
+					<div class="form-group">
+                        <input class="form-control form-control-user" placeholder="Password" name="cpassword" type="password" value="">
+                    </div>
+					<p style = "color: red;"><?php if (isset($error['cp'])) echo $error['cp']; ?></p>
+			<button id="button"  style="width: 100%; background-color: green;">Sign Up</button><br><br>
+			<h5 style="color: black; font-style: normal;">do you have an account? <a href="Login.php" style="text-decoration: none; color: orangered;">Click to Login!</a></h5>
 			<p style="color: red;"><?php if (isset($error['empty_entry'])) echo $error['empty_entry']; ?></p>
 		</form>
 	</div>
 </body>
 </html>
+
+<?php
+	include("../includes/footer.php");
+?>
