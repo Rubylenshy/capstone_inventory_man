@@ -13,8 +13,8 @@
     <style>
         #tables{
             font-weight: 700;
-            font-size: 15px;
-           /* font-family: 'Prompt', sans-serif; */
+            /* font-size: 15px;
+           font-family: 'Prompt', sans-serif; */
         }
         #sidenav{
             top: 0;
