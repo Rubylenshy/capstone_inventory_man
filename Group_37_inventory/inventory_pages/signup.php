@@ -24,14 +24,13 @@ session_start();
 			// save to database
 			$user_id = random_num(6);
 			$query = "insert into admin_table (user_id, user_name, password, cpassword) values ('$user_id', '$user_name', '$password', '$cpassword')";
-			mysqli_query($connect, $query);
-			if(!mysqli_num_rows($result)){	
+			$result=mysqli_query($connect, $query);
 			// re-direction
 			header("Location: Login.php");
 			die;	
 			}
 
-		}else{
+		else{
 			$error['empty_entry']="Please enter some valid information!";
 		}
 
