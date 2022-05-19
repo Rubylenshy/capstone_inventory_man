@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
     #nav {
         height: 50px;
         list-style: none;
@@ -52,7 +53,7 @@
             <div class="topbar-divider d-none d-sm-block"></div>     
             <li class="nav-item">
                 <a class="nav-link">
-                <span style="text-transform: uppercase; color:darkslategray;"><?php echo  $user_data['user_name'] ;?></span>
+                <span style="text-transform: uppercase; color:darkslategray; font-weight: 600; font-family: 'Julius Sans One', sans-serif;"><?php echo  $user_data['user_name'] ;?></span>
                 <img class="img-profile rounded-circle" id="img" src="../img/profile.jpg">
                 </a>
             </li> 

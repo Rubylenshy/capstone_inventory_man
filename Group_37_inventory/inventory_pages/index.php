@@ -9,7 +9,7 @@ session_start();
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Restaurant | Home</title>
+	<title>Cheffings | Home</title>
 </head>
 <div class="">
 	<h1>Welcome to your Inventory</h1>
