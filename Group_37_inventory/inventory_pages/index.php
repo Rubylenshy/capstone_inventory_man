@@ -2,16 +2,16 @@
 session_start();
 	include("../includes/connection.php");
 	include("../includes/topbar.php");
-
+	include("../includes/sidebar.php");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Restaurant | Login</title>
+	<title>Restaurant | Home</title>
 </head>
-<body>
+<div class="">
 	<h1>Welcome to your Inventory</h1>
 	<br/>
 	Hello, Welcome.
@@ -20,7 +20,7 @@ session_start();
         sed perspiciatis blanditiis quisquam enim iste <br>
         voluptate molestias voluptatum veniam sequi excepturi 
         doloremque ratione. Assumenda, soluta.</p>
-</body>
+</div>
 </html>
 
 <?php
