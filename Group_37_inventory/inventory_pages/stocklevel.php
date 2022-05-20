@@ -11,15 +11,30 @@ session_start();
 	<meta charset="utf-8">
 	<title>Cheffings | Stock Level</title>
 </head>
-<div class="">
-	<h1>This is the Ingredient Stock Level list</h1>
-	<br/>
-	Hello, Welcome.
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-        Voluptatibus, non. Velit, aut voluptatibus at, 
-        sed perspiciatis blanditiis quisquam enim iste <br>
-        voluptate molestias voluptatum veniam sequi excepturi 
-        doloremque ratione. Assumenda, soluta.</p>
+<div class="card">
+			<div class="card-header text-primary">
+				<h2>Ingredient Stock Level</h2>
+			</div>
+			<div class="card-body" id="order-table">
+		<div class="table-responsive">	
+			<table class="table table-bordered table-stripped">
+				<thead>
+					<tr>
+						<th>Ingredient ID</th>
+						<th>Item</th>
+						<th>Quantity</th>
+						<th>Cost per Unit</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+<?php   
+				
+?>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
 </html>
 

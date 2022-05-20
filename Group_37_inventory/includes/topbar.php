@@ -22,6 +22,7 @@
         width: 30px;
     }
     #logout{
+        text-decoration-line: none;
         font-weight: 500;
         color: white;
     }
@@ -46,7 +47,7 @@
             <!-- Nav Item - User Information -->
         <ul class="navbar-nav ml-auto" style="align-items: center;">        
             <li>       
-                <div class="bg-primary" style="border-radius: 5px; border: none; ">
+                <div class="btn btn-primary" style="border-radius: 5px; border: none; ">
                     <a id="logout" class="" href="../inventory_pages/logout.php">Logout</a>
                 </div>
             </li>       

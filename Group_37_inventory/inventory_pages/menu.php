@@ -11,15 +11,93 @@ session_start();
 	<meta charset="utf-8">
 	<title>Cheffings | Menu Cost</title>
 </head>
-<div class="">
-	<h1>This is the Menu list</h1>
-	<br/>
-	Hello, Welcome.
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-        Voluptatibus, non. Velit, aut voluptatibus at, 
-        sed perspiciatis blanditiis quisquam enim iste <br>
-        voluptate molestias voluptatum veniam sequi excepturi 
-        doloremque ratione. Assumenda, soluta.</p>
+<div class="card">
+			<div class="card-header text-primary">
+				<h2>Menu Costs</h2>
+			</div>
+	<div class="card-body" id="order-table">
+		<div>
+			<h4 class="card-header">Appetizers & Beverages</h4>
+		</div>
+		<div class="table-responsive">	
+			<table class="table table-bordered table-stripped">
+				<thead>
+					<tr>
+						<th>Food/Dish</th>
+						<th>Cost</th>
+						<th>Waiting Duration</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+<?php   
+				
+?>
+				</tbody>
+			</table>
+		</div>
+	<div>
+		<h4 class="card-header">Main Dish</h4>
+	</div>
+	<div class="table-responsive">	
+		<table class="table table-bordered table-stripped">
+			<thead>
+				<tr>
+					<th>Food/Dish</th>
+					<th>Cost</th>
+					<th>Waiting Duration</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+<?php   
+				
+?>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<h4 class="card-header">Side Dish</h4>
+	</div>
+	<div class="table-responsive">	
+		<table class="table table-bordered table-stripped">
+			<thead>
+				<tr>
+					<th>Food/Dish</th>
+					<th>Cost</th>
+					<th>Waiting Duration</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+<?php   
+				
+?>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<h4 class="card-header">Desserts</h4>
+	</div>
+	<div class="table-responsive">	
+		<table class="table table-bordered table-stripped">
+			<thead>
+				<tr>
+					<th>Food/Dish</th>
+					<th>Cost</th>
+					<th>Waiting Duration</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+<?php   
+				
+?>
+			</tbody>
+		</table>
+	</div>
+
+	</div>
 </div>
 </html>
 
