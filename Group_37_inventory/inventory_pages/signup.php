@@ -58,7 +58,7 @@ session_start();
 		#box{
 			background-color: darkgrey;
 			margin: auto;
-			width: 700px;
+			width: 500px;
 			padding: 50px;
 			top: 50px;
 			border-radius: 15px;
@@ -75,6 +75,7 @@ session_start();
 					<div class="form-group">
                         <input minlength="6" class="form-control form-control-user" placeholder="Enter your password" name="password" type="password" value="">
                     </div>
+					<p></p>
 					<div class="form-group">
                         <input minlength="6" class="form-control form-control-user" placeholder="Re-enter your password" name="cpassword" type="password" value="">
                     </div>

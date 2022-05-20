@@ -21,7 +21,7 @@ session_start();
 						// re-direction
 						header("Location: index.php");
 						die;
-					}elseif(empty($user_name)&& empty($password)){
+					}else{
 							$error['empty'] = 'Please provide valid information';
 						}
 				}
@@ -39,7 +39,6 @@ session_start();
 </head>
 <body>
 	<style type="text/css">
-		@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 		#text{
 			height: 25px;
 			border-radius: 5px;
@@ -57,7 +56,7 @@ session_start();
 		#box{
 			background-color: darkgrey;
 			margin: auto;
-			width: 700px;
+			width: 500px;
 			padding: 50px;
 			top: 50px;
 			border-radius: 15px;
@@ -72,9 +71,11 @@ session_start();
 			<div class="form-group">
                         <input class="form-control form-control-user" placeholder="Enter your username" name="user_name" type="text" autofocus>
                     </div>
+					<br>
                     <div class="form-group">
                         <input minlength="6" class="form-control form-control-user" placeholder="Enter your password" name="password" type="password" value="">
                     </div>
+					<br>
 			<button id="button" style="width: 100%; align-self: center; background-color: green;">Login</button><br><br>
 			<h5 style="color: black;">don't have an account? <a href="signup.php" style="color: orangered; text-decoration: none;">Register now!</a></h5>
 			<p style="color; red;"><?php if(isset($error['empty'])) echo $error['empty'];?></p>

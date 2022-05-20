@@ -3,7 +3,7 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpassword = "";
-$dbname = "capstone_login";
+$dbname = "group37_inventory";
 
 if(!$connect = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname))
 {
