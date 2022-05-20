@@ -10,7 +10,7 @@
         <style> 
             #footer1{
                 display: flex;
-                position: absolute;
+                position: static;
                 padding: 1rem;
                 bottom: 0;
                 width: 100%;

@@ -17,9 +17,9 @@
            font-family: 'Prompt', sans-serif; */
         }
         #sidenav{
-            top: 0;
+            bottom: 0;
             z-index: 1000;
-            height: auto;
+            height: 100%;
             width: 20%;
             float: left;
             min-height: 100%;
@@ -45,7 +45,6 @@
                         <div class="sidebar-heading" style="font-size: 13px;">
                         Tables
                         </div>
-                        <!-- Tables Buttons -->
 
                         <li class="nav-item">
                         <a class="nav-link" href="orders.php">

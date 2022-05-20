@@ -11,21 +11,30 @@ session_start();
 	<meta charset="utf-8">
 	<title>Cheffings | Home</title>
 </head>
-<div class="">
+<style>
+	.home{
+  		height: 100%;
+		background-position: center;
+		background-size: cover;
+		font-size: 20px;
+	}
+</style>
+<div class="home">
 			<div class="card-header text-primary">
 				<h1>Home</h1>
 			</div>
 	<br/>
 	Hello, Welcome to Cheffings Inventory.
-    <p>
-		
-	</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-        Voluptatibus, non. Velit, aut voluptatibus at, 
-        sed perspiciatis blanditiis quisquam enim iste <br>
-        voluptate molestias voluptatum veniam sequi excepturi 
-        doloremque ratione. Assumenda, soluta.</p>
-	
+	<div>
+		<p>
+			
+		</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+			Voluptatibus, non. Velit, aut voluptatibus at, 
+			sed perspiciatis blanditiis quisquam enim iste <br>
+			voluptate molestias voluptatum veniam sequi excepturi 
+			doloremque ratione. Assumenda, soluta.</p>
+	</div>	
 </div>
 </html>
 
