@@ -22,6 +22,7 @@
         width: 30px;
     }
     #logout{
+        text-decoration-line: none;
         font-weight: 500;
         color: white;
     }
@@ -37,16 +38,14 @@
 
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="nav">
 
-<!-- Sidebar Toggle (Topbar) -->
             <div>
                 <a class="navbar-brand pull-left"  href="index.php" id="cheffings">
 					<img src="../img/carrot.jpg" width="30" height="28">Cheffings
 			 	</a>
             </div>    
-            <!-- Nav Item - User Information -->
         <ul class="navbar-nav ml-auto" style="align-items: center;">        
             <li>       
-                <div class="bg-primary" style="border-radius: 5px; border: none; ">
+                <div class="btn btn-primary" style="border-radius: 5px; border: none; ">
                     <a id="logout" class="" href="../inventory_pages/logout.php">Logout</a>
                 </div>
             </li>       

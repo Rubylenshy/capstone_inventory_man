@@ -10,7 +10,7 @@
         <style> 
             #footer1{
                 display: flex;
-                position: absolute;
+                position: static;
                 padding: 1rem;
                 bottom: 0;
                 width: 100%;
@@ -22,7 +22,7 @@
     <div class="footer">
         <footer id="footer1">
             <div class= "container my-auto">
-                <span style="font-weight: 300;">Copyright © Group 37 Restaurant Inventory System 2022</span>
+                <span style="font-weight: 300;">Copyright © 2022 | Group 37 Restaurant Inventory System</span>
             </div>
         </footer>
 </div>
