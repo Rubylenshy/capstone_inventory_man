@@ -1,2 +1,2 @@
-# Please find the database folder and import the 
-# database name "group37_inventory"
+# Please import the database "group37_inventory" from the database folder.
+# Feel free to signup and login. 
