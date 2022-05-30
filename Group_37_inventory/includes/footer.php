@@ -7,26 +7,27 @@
 		
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-        <style> 
+        <style>
             #footer1{
                 display: flex;
-                position: static;
+                position: absolute;
                 padding: 1rem;
-                bottom: 0;
+                top: 100%;
                 width: 100%;
                 height: 50px;
                 background-color: #e9ecef;
                 text-align: center;
                 }
         </style>
-    <div class="footer">
+<body>
+    <div class="sticky-footer">
         <footer id="footer1">
-            <div class= "container my-auto">
+            <div class= "container text-center">
                 <span style="font-weight: 300;">Copyright © 2022 | Group 37 Restaurant Inventory System</span>
             </div>
         </footer>
-</div>
-	
+    </div>
+</body>
 </html>	
 
 <?php

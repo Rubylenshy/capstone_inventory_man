@@ -10,10 +10,19 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<title>Cheffings | Menu Cost</title>
+<style>
+	table thead{
+		background-color: #293462;
+	}
+	table thead th{
+		color: white;
+	}
+</style>
 </head>
+<body>
 <div class="card">
 			<div class="card-header text-primary">
-				<h2>Menu Costs</h2>
+				<h2>Menu Costs <a href="" style="float:right;"><i class="bi bi-plus-circle-fill"></i></a></h2>
 			</div>
 	<div class="card-body" id="order-table">
 		<div>
@@ -25,14 +34,30 @@ session_start();
 					<tr>
 						<th>Food/Dish</th>
 						<th>Cost</th>
-						<th>Waiting Duration</th>
+						<th>Duration</th>
 						<th></th>
 					</tr>
 				</thead>
 				<tbody>
-<?php   
-				
-?>
+					<?php   
+						$query = "SELECT * FROM appetizers_bev";
+						$appetizer = mysqli_query($connect, $query);
+						
+						if (!$query) {
+							die;
+						}
+						while ($row = $appetizer->fetch_assoc()) {
+							echo "<tr>
+								<td> ".$row["dish"]." </td>
+								<td> ".$row["cost"]." </td>
+								<td> ".$row["duration"]." </td>
+								<td> 
+									<button class='btn btn-primary' data-bs-target='#update-modal' data-bs-toggle='modal'>Update</button>
+									<button class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>Delete</button>
+								</td>
+							</tr>";
+						}
+					?>
 				</tbody>
 			</table>
 		</div>
@@ -45,14 +70,30 @@ session_start();
 				<tr>
 					<th>Food/Dish</th>
 					<th>Cost</th>
-					<th>Waiting Duration</th>
+					<th>Duration</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-<?php   
-				
-?>
+				<?php   
+					$query = "SELECT * FROM main_dish";
+					$main = mysqli_query($connect, $query);
+					
+					if (!$query) {
+						die;
+					}
+					while ($row = $main->fetch_assoc()) {
+						echo "<tr>
+							<td> ".$row["dish"]." </td>
+							<td> ".$row["cost"]." </td>
+							<td> ".$row["duration"]." </td>
+							<td> 
+								<button class='btn btn-primary' data-bs-target='#update-modal' data-bs-toggle='modal'>Update</button>
+								<button class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>Delete</button>
+							</td>
+						</tr>";
+					}
+				?>
 			</tbody>
 		</table>
 	</div>
@@ -65,14 +106,30 @@ session_start();
 				<tr>
 					<th>Food/Dish</th>
 					<th>Cost</th>
-					<th>Waiting Duration</th>
+					<th>Duration</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-<?php   
-				
-?>
+				<?php   
+					$query = "SELECT * FROM side_dish";
+					$side = mysqli_query($connect, $query);
+					
+					if (!$query) {
+						die;
+					}
+					while ($row = $side->fetch_assoc()) {
+						echo "<tr>
+							<td> ".$row["dish"]." </td>
+							<td> ".$row["cost"]." </td>
+							<td> ".$row["duration"]." </td>
+							<td> 
+								<button class='btn btn-primary' data-bs-target='#update-modal' data-bs-toggle='modal'>Update</button>
+								<button class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>Delete</button>
+							</td>
+						</tr>";
+					}			
+				?>
 			</tbody>
 		</table>
 	</div>
@@ -85,20 +142,37 @@ session_start();
 				<tr>
 					<th>Food/Dish</th>
 					<th>Cost</th>
-					<th>Waiting Duration</th>
+					<th>Duration</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-<?php   
-				
-?>
+				<?php   
+					$query = "SELECT * FROM desserts";
+					$desserts = mysqli_query($connect, $query);
+					
+					if (!$query) {
+						die;
+					}
+					while ($row = $desserts->fetch_assoc()) {
+						echo "<tr>
+							<td> ".$row["dish"]." </td>
+							<td> ".$row["cost"]." </td>
+							<td> ".$row["duration"]." </td>
+							<td> 
+								<button class='btn btn-primary' data-bs-target='#update-modal' data-bs-toggle='modal'>Update</button>
+								<button class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>Delete</button>
+							</td>
+						</tr>";
+					}			
+				?>
 			</tbody>
 		</table>
 	</div>
 
 	</div>
 </div>
+</body>
 </html>
 
 <?php
