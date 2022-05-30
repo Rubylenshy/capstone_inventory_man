@@ -10,10 +10,26 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<title>Cheffings | Recipes</title>
+<style>
+	table thead{
+		background-color: #293462;
+	}
+	table thead th{
+		color: white;
+	}
+	table tbody th a{
+		text-decoration: none;
+	}
+	table tbody th a:hover{
+		text-decoration: none;
+		color: #16003B;
+	}
+</style>
 </head>
+<body>
 <div class="card">
 			<div class="card-header text-primary">
-				<h2>Recipes</h2>
+				<h2>Recipes <a href="" style="float:right;"><i class="bi bi-plus-circle-fill"></i></a></h2>
 			</div>
 	<div class="card-body" id="order-table">
 		<div>
@@ -126,6 +142,7 @@ session_start();
 		</div>
 	</div>
 </div>
+</body>
 </html>
 
 <?php

@@ -18,14 +18,34 @@
         }
         #sidenav{
             bottom: 0;
-            z-index: 1000;
             height: 100%;
             width: 20%;
             float: left;
             min-height: 100%;
             padding: 0 0 60px;
         }
-        @import url('');
+        .sidebar ul li a{
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            display: block;
+            line-height: 50px;
+            padding-left: 20px;
+            transition: .2s;
+            text-decoration: none;
+        }
+        #text{
+            text-transform: uppercase;
+            color: black;
+            font-weight: 700;
+            font-size: small;
+            padding-left: 10px;
+        }
+        ul li:hover #a{
+            padding-left: 30px;
+            text-decoration: none;
+            color: #16003B;
+        }
     </style>
     
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -34,32 +54,31 @@
     <link href="../bootstrap/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="../bootstrap/sb-admin-2.css" rel="stylesheet">
     <body class="page-bottom">
-        <div id="sidenav">
+        <div id="sidenav" class="sidebar">
 
            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
                         <li class="nav-item">
-                        <a class="nav-link" href="index.php">
+                        <a href="index.php" id="a">
                             <span id="tables">Home</span></a>
                         </li>
                         <hr class="sidebar-divider">
-                        <div class="sidebar-heading" style="font-size: 13px;">
+                        <div class="sidebar-heading" id="text">
                         Tables
                         </div>
-
                         <li class="nav-item">
-                        <a class="nav-link" href="orders.php">
+                        <a href="orders.php" id="a">
                             <span id="tables">Purchase Orders</span></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="recipes.php">
+                        <a href="recipes.php" id="a">
                             <span id="tables">Recipes</span></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="menu.php">
+                        <a href="menu.php" id="a">
                             <span id="tables">Menu Cost</span></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="stocklevel.php">
+                        <a href="stocklevel.php" id="a">
                             <span id="tables">Ingredient Stock Level</span></a>
                         </li>
                     </hr>

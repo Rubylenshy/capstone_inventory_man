@@ -23,7 +23,7 @@ session_start();
 			}elseif (!empty($user_name) && !empty($password) && !empty($cpassword)) {
 			// save to database
 			$user_id = random_num(6);
-			$query = "insert into admin_table (user_id, user_name, password, cpassword) values ('$user_id', '$user_name', '$password', '$cpassword')";
+			$query = "INSERT INTO admin_table (user_id, user_name, password, cpassword) VALUES ('$user_id', '$user_name', '$password', '$cpassword')";
 			$result=mysqli_query($connect, $query);
 			// re-direction
 			header("Location: Login.php");
@@ -45,49 +45,73 @@ session_start();
 	<title>Sign Up</title>
 </head>
 
-	<style type="text/css">
+<style type="text/css">
+		
+	body, html {
+  		height: 100%;
+  		margin: 0;
+	}
 
-		#button{
-			padding: 10px;
-			width: 100px;
-			color: white;
-			border-radius: 6px;
-			border: none;
-		}
+	.bg {
+		background-image: url("../img/bg_cheffings.png");
+		height: 100%; 
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.padding{
+		padding: 40px;
+		font-family: 'Parisienne', cursive;
+	}
+	#button{
+		padding: 10px;
+		width: 100px;
+		color: white;
+		border-radius: 6px;
+		border: none;
+		width: 100%; 
+		background-color: gray;
+	}
 
-		#box{
-			background-color: darkgrey;
-			margin: auto;
-			width: 500px;
-			padding: 50px;
-			top: 50px;
-			border-radius: 15px;
-		}
+	#box{
+		background-color: white;
+		margin: auto;
+		width: 500px;
+		padding: 30px;
+	}
+	
+	@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 	</style>
-
-	<div class="container col-lg-5" id="box">
-		<form method="post" class="form-group">
-			<div style="font-size: 30px; font-weight:bold;text-align: center;color: black;">SIGN UP</div><br>
+	<div class="bg">
+		<div class="text-center text-light padding">
+			<h3>Cheffings</h3>
+		</div>
+	<div class="container col-lg-5 shadow " id="box">
+		<form method="post">
+			<div style="font-size: 30px; text-align: center;color: black;">SIGN UP</div>
 					<div class="form-group">
-                        <input  class="form-control form-control-user" placeholder="Enter your username" name="user_name" type="text"  autofocus>
+						<label class="form-label" style="font-weight:500;">Username:</label>
+                        <input  class="form-control" placeholder="Enter your username" name="user_name" type="text">
                     </div>
-                    <p style = "color: red;"><?php if (isset($error['u'])) echo $error['u']; ?></p>
+                    <small style = "color: red;"><?php if (isset($error['u'])) echo $error['u']; ?></small>
 					<div class="form-group">
-                        <input minlength="6" class="form-control form-control-user" placeholder="Enter your password" name="password" type="password" value="">
+						<label class="form-label" style="font-weight:500;">Password:</label>
+                        <input minlength="6" class="form-control" placeholder="Enter your password" name="password" type="password" value="">
                     </div>
 					<p></p>
 					<div class="form-group">
-                        <input minlength="6" class="form-control form-control-user" placeholder="Re-enter your password" name="cpassword" type="password" value="">
-                    </div>
-					<p style = "color: red;"><?php if (isset($error['cp'])) echo $error['cp']; ?></p>
-			<button id="button"  style="width: 100%; background-color: green;">Sign Up</button><br><br>
-			<h5 style="color: black; font-style: normal;">do you have an account? <a href="Login.php" style="text-decoration: none; color: orangered;">Click to Login!</a></h5>
-			<p style="color: red;"><?php if (isset($error['empty_entry'])) echo $error['empty_entry']; ?></p>
+						<label class="form-label" style="font-weight:500;">Confirm Password:</label>
+                        <input minlength="6" class="form-control" placeholder="Re-enter your password" name="cpassword" type="password" value="">
+                    </div><br>
+					<small style = "color: red;"><?php if (isset($error['cp'])) echo $error['cp']; ?></small>
+			<button id="button" type="submit">Sign Up</button><br><br>
+			<h5 style="text-align: center; color: black; font-style: normal;">do you have an account? <a href="Login.php" style="text-decoration: none; color: orangered;">Click to Login!</a></h5>
+			<small style="color: red;"><?php if (isset($error['empty_entry'])) echo $error['empty_entry']; ?></small>
 		</form>
 	</div>
-</body>
-</html>
-
+	</div>
 <?php
 	include("../includes/footer.php");
 ?>
+</body>
+</html>
+

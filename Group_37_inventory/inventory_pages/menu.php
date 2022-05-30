@@ -10,14 +10,29 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<title>Cheffings | Menu Cost</title>
+<style>
+	table thead{
+		background-color: #293462;
+	}
+	table thead th{
+		color: white;
+	}
+	body a{
+		text-decoration: none;
+	}
+	body a:hover{
+		text-decoration: none;
+	}
+</style>
 </head>
+<body>
 <div class="card">
 			<div class="card-header text-primary">
 				<h2>Menu Costs</h2>
 			</div>
 	<div class="card-body" id="order-table">
 		<div>
-			<h4 class="card-header">Appetizers & Beverages</h4>
+			<h4 class="card-header">Appetizers & Beverages <a href="new_appetizers.php" style="float:right;">add</a></h4>
 		</div>
 		<div class="table-responsive">	
 			<table class="table table-bordered table-stripped">
@@ -25,19 +40,40 @@ session_start();
 					<tr>
 						<th>Food/Dish</th>
 						<th>Cost</th>
-						<th>Waiting Duration</th>
+						<th>Duration</th>
 						<th></th>
 					</tr>
 				</thead>
 				<tbody>
-<?php   
-				
-?>
+					<?php   
+						$query = "SELECT * FROM appetizers_bev";
+						$appetizer = mysqli_query($connect, $query);
+						
+						if (!$query) {
+							die;
+						}
+						while ($row = $appetizer->fetch_assoc()) {
+							$id=$row['id'];
+							$dish=$row['dish'];
+							$cost=$row['cost'];
+							$duration=$row['duration'];
+
+							echo "<tr>
+								<td>$dish</td>
+								<td>$cost</td>
+								<td>$duration</td>
+								<td> 
+									<button class='btn btn-primary'><a class='text-light' href='update_appetizers.php?up_appetizers_id=".$id."'>Update</button>
+									<button class='btn btn-danger'><a class='text-light' href='delete_appetizers.php?del_appetizers_id=".$id."'>Delete</a></button>
+								</td>
+							</tr>";
+						}
+					?>
 				</tbody>
 			</table>
 		</div>
 	<div>
-		<h4 class="card-header">Main Dish</h4>
+		<h4 class="card-header">Main Dish <a href="new_maindish" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
 		<table class="table table-bordered table-stripped">
@@ -45,19 +81,39 @@ session_start();
 				<tr>
 					<th>Food/Dish</th>
 					<th>Cost</th>
-					<th>Waiting Duration</th>
+					<th>Duration</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-<?php   
-				
-?>
+				<?php   
+					$query = "SELECT * FROM main_dish";
+					$main = mysqli_query($connect, $query);
+					
+					if (!$query) {
+						die;
+					}
+					while ($row = $main->fetch_assoc()) {
+						$id=$row['id'];
+						$dish=$row['dish'];
+						$cost=$row['cost'];
+						$duration=$row['duration'];
+						echo "<tr>
+							<td>$dish</td>
+							<td>$cost</td>
+							<td>$duration</td>
+							<td> 
+								<button class='btn btn-primary'><a href='update_maindish.php?up_maindish_id=".$id."'>Update</button>
+								<button class='btn btn-danger'><a href='delete_maindish.php?del_maindish_id=".$id."'>Delete</a></button>
+							</td>
+						</tr>";
+					}
+				?>
 			</tbody>
 		</table>
 	</div>
 	<div>
-		<h4 class="card-header">Side Dish</h4>
+		<h4 class="card-header">Side Dish <a href="new_sidedish.php" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
 		<table class="table table-bordered table-stripped">
@@ -65,19 +121,39 @@ session_start();
 				<tr>
 					<th>Food/Dish</th>
 					<th>Cost</th>
-					<th>Waiting Duration</th>
+					<th>Duration</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-<?php   
-				
-?>
+				<?php   
+					$query = "SELECT * FROM side_dish";
+					$side = mysqli_query($connect, $query);
+					
+					if (!$query) {
+						die;
+					}
+					while ($row = $side->fetch_assoc()) {
+						$id=$row['id'];
+						$dish=$row['dish'];
+						$cost=$row['cost'];
+						$duration=$row['duration'];
+						echo "<tr>
+							<td>$dish</td>
+							<td>$cost</td>
+							<td>$duration</td>
+							<td> 
+								<button class='btn btn-primary'><a href='update_sidedish.php?up_sidedish_id=".$id."'>Update</button>
+								<button class='btn btn-danger'><a href='delete_sidedish.php?del_sidedish_id=".$id."'>Delete</a></button>
+							</td>
+						</tr>";
+					}			
+				?>
 			</tbody>
 		</table>
 	</div>
 	<div>
-		<h4 class="card-header">Desserts</h4>
+		<h4 class="card-header">Desserts <a href="new_desserts.php" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
 		<table class="table table-bordered table-stripped">
@@ -85,20 +161,42 @@ session_start();
 				<tr>
 					<th>Food/Dish</th>
 					<th>Cost</th>
-					<th>Waiting Duration</th>
+					<th>Duration</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-<?php   
-				
-?>
+				<?php   
+					$query = "SELECT * FROM desserts";
+					$desserts = mysqli_query($connect, $query);
+					
+					if (!$query) {
+						die;
+					}
+					while ($row = $desserts->fetch_assoc()) {
+						$id=$row['id'];
+						$dish=$row['dish'];
+						$cost=$row['cost'];
+						$duration=$row['duration'];
+						
+						echo "<tr>
+							<td> ".$row["dish"]." </td>
+							<td> ".$row["cost"]." </td>
+							<td> ".$row["duration"]." </td>
+							<td> 
+								<button class='btn btn-primary'><a href='update_desserts.php?up_desserts_id=".$id."'>Update</button>
+								<button class='btn btn-danger'><a href='delete_desserts.php?del_desserts_id=".$id."'>Delete</a></button>
+							</td>
+						</tr>";
+					}			
+				?>
 			</tbody>
 		</table>
 	</div>
 
 	</div>
 </div>
+</body>
 </html>
 
 <?php
