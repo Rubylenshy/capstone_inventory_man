@@ -17,16 +17,22 @@ session_start();
 	table thead th{
 		color: white;
 	}
+	body a{
+		text-decoration: none;
+	}
+	body a:hover{
+		text-decoration: none;
+	}
 </style>
 </head>
 <body>
 <div class="card">
 			<div class="card-header text-primary">
-				<h2>Menu Costs <a href="" style="float:right;"><i class="bi bi-plus-circle-fill"></i></a></h2>
+				<h2>Menu Costs</h2>
 			</div>
 	<div class="card-body" id="order-table">
 		<div>
-			<h4 class="card-header">Appetizers & Beverages</h4>
+			<h4 class="card-header">Appetizers & Beverages <a href="new_appetizers.php" style="float:right;">add</a></h4>
 		</div>
 		<div class="table-responsive">	
 			<table class="table table-bordered table-stripped">
@@ -47,13 +53,18 @@ session_start();
 							die;
 						}
 						while ($row = $appetizer->fetch_assoc()) {
+							$id=$row['id'];
+							$dish=$row['dish'];
+							$cost=$row['cost'];
+							$duration=$row['duration'];
+
 							echo "<tr>
-								<td> ".$row["dish"]." </td>
-								<td> ".$row["cost"]." </td>
-								<td> ".$row["duration"]." </td>
+								<td>$dish</td>
+								<td>$cost</td>
+								<td>$duration</td>
 								<td> 
-									<button class='btn btn-primary' data-bs-target='#update-modal' data-bs-toggle='modal'>Update</button>
-									<button class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>Delete</button>
+									<button class='btn btn-primary'><a class='text-light' href='update_appetizers.php?up_appetizers_id=".$id."'>Update</button>
+									<button class='btn btn-danger'><a class='text-light' href='delete_appetizers.php?del_appetizers_id=".$id."'>Delete</a></button>
 								</td>
 							</tr>";
 						}
@@ -62,7 +73,7 @@ session_start();
 			</table>
 		</div>
 	<div>
-		<h4 class="card-header">Main Dish</h4>
+		<h4 class="card-header">Main Dish <a href="new_maindish" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
 		<table class="table table-bordered table-stripped">
@@ -83,13 +94,17 @@ session_start();
 						die;
 					}
 					while ($row = $main->fetch_assoc()) {
+						$id=$row['id'];
+						$dish=$row['dish'];
+						$cost=$row['cost'];
+						$duration=$row['duration'];
 						echo "<tr>
-							<td> ".$row["dish"]." </td>
-							<td> ".$row["cost"]." </td>
-							<td> ".$row["duration"]." </td>
+							<td>$dish</td>
+							<td>$cost</td>
+							<td>$duration</td>
 							<td> 
-								<button class='btn btn-primary' data-bs-target='#update-modal' data-bs-toggle='modal'>Update</button>
-								<button class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>Delete</button>
+								<button class='btn btn-primary'><a href='update_maindish.php?up_maindish_id=".$id."'>Update</button>
+								<button class='btn btn-danger'><a href='delete_maindish.php?del_maindish_id=".$id."'>Delete</a></button>
 							</td>
 						</tr>";
 					}
@@ -98,7 +113,7 @@ session_start();
 		</table>
 	</div>
 	<div>
-		<h4 class="card-header">Side Dish</h4>
+		<h4 class="card-header">Side Dish <a href="new_sidedish.php" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
 		<table class="table table-bordered table-stripped">
@@ -119,13 +134,17 @@ session_start();
 						die;
 					}
 					while ($row = $side->fetch_assoc()) {
+						$id=$row['id'];
+						$dish=$row['dish'];
+						$cost=$row['cost'];
+						$duration=$row['duration'];
 						echo "<tr>
-							<td> ".$row["dish"]." </td>
-							<td> ".$row["cost"]." </td>
-							<td> ".$row["duration"]." </td>
+							<td>$dish</td>
+							<td>$cost</td>
+							<td>$duration</td>
 							<td> 
-								<button class='btn btn-primary' data-bs-target='#update-modal' data-bs-toggle='modal'>Update</button>
-								<button class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>Delete</button>
+								<button class='btn btn-primary'><a href='update_sidedish.php?up_sidedish_id=".$id."'>Update</button>
+								<button class='btn btn-danger'><a href='delete_sidedish.php?del_sidedish_id=".$id."'>Delete</a></button>
 							</td>
 						</tr>";
 					}			
@@ -134,7 +153,7 @@ session_start();
 		</table>
 	</div>
 	<div>
-		<h4 class="card-header">Desserts</h4>
+		<h4 class="card-header">Desserts <a href="new_desserts.php" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
 		<table class="table table-bordered table-stripped">
@@ -155,13 +174,18 @@ session_start();
 						die;
 					}
 					while ($row = $desserts->fetch_assoc()) {
+						$id=$row['id'];
+						$dish=$row['dish'];
+						$cost=$row['cost'];
+						$duration=$row['duration'];
+						
 						echo "<tr>
 							<td> ".$row["dish"]." </td>
 							<td> ".$row["cost"]." </td>
 							<td> ".$row["duration"]." </td>
 							<td> 
-								<button class='btn btn-primary' data-bs-target='#update-modal' data-bs-toggle='modal'>Update</button>
-								<button class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>Delete</button>
+								<button class='btn btn-primary'><a href='update_desserts.php?up_desserts_id=".$id."'>Update</button>
+								<button class='btn btn-danger'><a href='delete_desserts.php?del_desserts_id=".$id."'>Delete</a></button>
 							</td>
 						</tr>";
 					}			

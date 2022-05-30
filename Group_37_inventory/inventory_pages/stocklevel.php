@@ -21,12 +21,20 @@ session_start();
 	table thead th{
 		color: white;
 	}
+	tbody a{
+		text-decoration: none;
+		color: white;
+	}
+	tbody a:hover{
+		text-decoration: none;
+		color: white;
+	}
 </style>
 </head>
 
 <div class="card">
 			<div class="card-header text-primary">
-				<h2>Ingredient Stock Level <a href="" style="float:right;"><i class="bi bi-plus-circle-fill"></i></a></h2>
+				<h2>Ingredient Stock Level <a href="new_stocklevel.php" style="float:right;">ADD</a></h2>
 			</div>
 	<div class="card-body">
 		<div class="table-responsive">	
@@ -63,7 +71,7 @@ session_start();
 									<button type='button' class='btn btn-primary'>
 										<a href='update_stocklevel.php?update_id=".$id."'>Update</a>
 									</button>
-									<button type='button' class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>
+									<button type='button' class='btn btn-danger'>
 										<a href='delete_stocklevel.php?delete_id=".$id."'>Delete</a>
 									</button>
 								</td>

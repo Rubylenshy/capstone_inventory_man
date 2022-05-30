@@ -24,8 +24,7 @@
         $result = mysqli_query($connect,$query);
         
         if ($result) {
-            echo'successfully';
-            // header('location:orders.php');
+           header('location:orders.php');
         } else {
             die;
         }

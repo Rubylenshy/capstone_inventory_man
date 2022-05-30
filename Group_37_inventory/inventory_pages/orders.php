@@ -30,10 +30,6 @@ session_start();
 		color: white;
 		text-decoration: none
 	}
-	#a{
-		color: white;
-		text-decoration: none;
-	}
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 </style>
 				
@@ -86,7 +82,7 @@ session_start();
 									<button type='button' class='btn btn-primary'>
 										<a href='update_orders.php?update_id=".$id."'>Update</a>
 									</button>
-									<button type='button' class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>
+									<button type='button' class='btn btn-danger'>
 										<a href='delete_orders.php?delete_id=".$id."'>Delete</a>
 									</button>
 								</td>
