@@ -57,7 +57,7 @@
 
 <body>
     <div id="column">
-    <div class="container col-lg-6 bg-light" id="padding">
+    <div class="container col-lg-6 bg-light shadow-lg" id="padding">
         <h3 class="text-center">Ingredient Form</h3>
         <form action="" method="post">
             <div class="form-group">

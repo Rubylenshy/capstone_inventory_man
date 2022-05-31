@@ -30,18 +30,18 @@ session_start();
 		color: white;
 		text-decoration: none
 	}
-	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 </style>
 				
 				
 <!-- Table -->
 <div class="card">
 			<div class="card-header text-primary">
-				<h2>Purchase Orders <a href="new_orders.php" style="float:right;">ADD</a></h2>
+				<h2>Purchase Orders <a href="new_orders.php" style="float:right;">
+				<img src="../bootstrap/icons/plus-circle-fill.svg" width="35" height="35"></a></h2>
 			</div>
 	<div class="card-body" id="order-table">
 		<div class="table-responsive">	
-			<table class="table table-bordered table-stripped">
+			<table class="table table-bordered table-hover">
 				<thead>
 					<tr>
 						<th>Order ID</th>
@@ -83,7 +83,7 @@ session_start();
 										<a href='update_orders.php?update_id=".$id."'>Update</a>
 									</button>
 									<button type='button' class='btn btn-danger'>
-										<a href='delete_orders.php?delete_id=".$id."'>Delete</a>
+										<a href='delete_orders.php?delete_orders_id=".$id."'>Delete</a>
 									</button>
 								</td>
 							</tr>";
