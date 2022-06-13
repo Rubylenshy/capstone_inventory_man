@@ -29,7 +29,7 @@ session_start();
 <body>
 <div class="card">
 			<div class="card-header text-primary">
-				<h2>Recipes <a href="" style="float:right;"><i class="bi bi-plus-circle-fill"></i></a></h2>
+				<h2>Recipes</h2>
 			</div>
 	<div class="card-body" id="order-table">
 		<div>
@@ -49,12 +49,12 @@ session_start();
 						while ($row = $appetizer->fetch_assoc()) {
 							$id=$row['id'];
 							$dish=$row['dish'];
-						}
-
-						echo "<tr>
+							
+							echo "<tr>
 							<td>$dish</td>
-							<th><a href='#' style='color: primary;'>View Recipe</a></th>
-						</tr>";
+							<th><a href='recipe_appetizers.php?recipe_id=".$id."' style='color: primary;'>View Recipe</a></th>
+							</tr>";
+						}
 						?>
 					</tbody>
 				</table>
@@ -80,12 +80,12 @@ session_start();
 							while ($row = $main->fetch_assoc()) {
 								$id=$row['id'];
 								$dish=$row['dish'];
-							}
-
-							echo "<tr>
+								
+								echo "<tr>
 								<td>$dish</td>
-								<th><a href='#' style='color: primary;'>View Recipe</a></th>
-							</tr>";
+								<th><a href='recipe_maindish.php?recipe_id=".$id."' style='color: primary;'>View Recipe</a></th>
+								</tr>";
+							}
 						?>
 					</tbody>
 				</table>
@@ -102,18 +102,22 @@ session_start();
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>Side Dish 1</td>
-							<th><a href="#" style="color: primary;">View Recipe</a></th>
-						</tr>
-						<tr>
-							<td>Side Dish 2</td>
-							<th><a href="#" style="color: primary;">View Recipe</a></th>
-						</tr>
-						<tr>
-							<td>Side Dish 3</td>
-							<th><a href="#" style="color: primary;">View Recipe</a></th>
-						</tr>
+					<?php
+							$query ="SELECT * FROM side_dish";
+							$main= mysqli_query($connect, $query);
+							if (!$query) {
+								die;
+							}
+							while ($row = $main->fetch_assoc()) {
+								$id=$row['id'];
+								$dish=$row['dish'];
+								
+								echo "<tr>
+								<td>$dish</td>
+								<th><a href='recipe_sidedish.php?recipe_id=".$id."' style='color: primary;'>View Recipe</a></th>
+								</tr>";
+							}
+						?>
 					</tbody>
 				</table>
 			</div>
@@ -129,18 +133,22 @@ session_start();
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>Desserts 1</td>
-							<th><a href="#" style="color: primary;">View Recipe</a></th>
-						</tr>
-						<tr>
-							<td>Desserts 2</td>
-							<th><a href="#" style="color: primary;">View Recipe</a></th>
-						</tr>
-						<tr>
-							<td>Desserts 3</td>
-							<th><a href="#" style="color: primary;">View Recipe</a></th>
-						</tr>
+					<?php
+							$query ="SELECT * FROM desserts";
+							$main= mysqli_query($connect, $query);
+							if (!$query) {
+								die;
+							}
+							while ($row = $main->fetch_assoc()) {
+								$id=$row['id'];
+								$dish=$row['dish'];
+								
+								echo "<tr>
+								<td>$dish</td>
+								<th><a href='recipe_desserts.php?recipe_id=".$id."' style='color: primary;'>View Recipe</a></th>
+								</tr>";
+							}
+						?>
 					</tbody>
 				</table>
 			</div>
