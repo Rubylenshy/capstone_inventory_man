@@ -88,7 +88,7 @@ session_start();
 		<div class="padding text-light">
 			<h3>Cheffings</h3>
 		</div>
-	<div class="container col-lg-5" id="box">
+	<div class="container col-lg-5 shadow-lg" id="box">
 		<form method="post">
 			<div style="font-size: 30px; text-align: center;color: black;">LOGIN NOW</div><br>
 			<div class="form-group">

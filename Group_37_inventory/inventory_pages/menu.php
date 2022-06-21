@@ -35,7 +35,7 @@ session_start();
 			<h4 class="card-header">Appetizers & Beverages <a href="new_appetizers.php" style="float:right;">add</a></h4>
 		</div>
 		<div class="table-responsive">	
-			<table class="table table-bordered table-stripped">
+			<table class="table table-bordered table-hover">
 				<thead>
 					<tr>
 						<th>Food/Dish</th>
@@ -63,8 +63,12 @@ session_start();
 								<td>$cost</td>
 								<td>$duration</td>
 								<td> 
-									<button class='btn btn-primary'><a class='text-light' href='update_appetizers.php?up_appetizers_id=".$id."'>Update</button>
-									<button class='btn btn-danger'><a class='text-light' href='delete_appetizers.php?del_appetizers_id=".$id."'>Delete</a></button>
+									<button class='btn btn-primary'>
+										<a class='text-light' href='update_appetizers.php?up_appetizers_id=".$id."'>Update</a>
+									</button>
+									<button class='btn btn-danger'>
+										<a class='text-light' href='delete_appetizers.php?del_appetizers_id=".$id."'>Delete</a>
+									</button>
 								</td>
 							</tr>";
 						}
@@ -73,10 +77,10 @@ session_start();
 			</table>
 		</div>
 	<div>
-		<h4 class="card-header">Main Dish <a href="new_maindish" style="float:right;">add</a></h4>
+		<h4 class="card-header">Main Dish <a href="new_maindish.php" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
-		<table class="table table-bordered table-stripped">
+		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
 					<th>Food/Dish</th>
@@ -103,8 +107,12 @@ session_start();
 							<td>$cost</td>
 							<td>$duration</td>
 							<td> 
-								<button class='btn btn-primary'><a href='update_maindish.php?up_maindish_id=".$id."'>Update</button>
-								<button class='btn btn-danger'><a href='delete_maindish.php?del_maindish_id=".$id."'>Delete</a></button>
+								<button class='btn btn-primary'>
+									<a class='text-light' href='update_maindish.php?up_maindish_id=".$id."'>Update</a>
+								</button>
+								<button class='btn btn-danger'>
+									<a class='text-light' href='delete_maindish.php?del_maindish_id=".$id."'>Delete</a>
+								</button>
 							</td>
 						</tr>";
 					}
@@ -116,7 +124,7 @@ session_start();
 		<h4 class="card-header">Side Dish <a href="new_sidedish.php" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
-		<table class="table table-bordered table-stripped">
+		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
 					<th>Food/Dish</th>
@@ -143,8 +151,12 @@ session_start();
 							<td>$cost</td>
 							<td>$duration</td>
 							<td> 
-								<button class='btn btn-primary'><a href='update_sidedish.php?up_sidedish_id=".$id."'>Update</button>
-								<button class='btn btn-danger'><a href='delete_sidedish.php?del_sidedish_id=".$id."'>Delete</a></button>
+								<button class='btn btn-primary'>
+									<a class='text-light' href='update_sidedish.php?up_sidedish_id=".$id."'>Update</a>
+								</button>
+								<button class='btn btn-danger'>
+									<a class='text-light' href='delete_sidedish.php?del_sidedish_id=".$id."'>Delete</a>
+								</button>
 							</td>
 						</tr>";
 					}			
@@ -156,7 +168,7 @@ session_start();
 		<h4 class="card-header">Desserts <a href="new_desserts.php" style="float:right;">add</a></h4>
 	</div>
 	<div class="table-responsive">	
-		<table class="table table-bordered table-stripped">
+		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
 					<th>Food/Dish</th>
@@ -184,8 +196,12 @@ session_start();
 							<td> ".$row["cost"]." </td>
 							<td> ".$row["duration"]." </td>
 							<td> 
-								<button class='btn btn-primary'><a href='update_desserts.php?up_desserts_id=".$id."'>Update</button>
-								<button class='btn btn-danger'><a href='delete_desserts.php?del_desserts_id=".$id."'>Delete</a></button>
+								<button class='btn btn-primary'>
+									<a class='text-light' href='update_desserts.php?up_desserts_id=".$id."'>Update</a>
+								</button>
+								<button class='btn btn-danger'>
+									<a class='text-light' href='delete_desserts.php?del_desserts_id=".$id."'>Delete</a>
+								</button>
 							</td>
 						</tr>";
 					}			
