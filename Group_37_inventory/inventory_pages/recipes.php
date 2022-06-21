@@ -29,7 +29,7 @@ session_start();
 <body>
 <div class="card">
 			<div class="card-header text-primary">
-				<h2>Recipes</h2>
+				<h2>Recipes <a href="" style="float:right;"><i class="bi bi-plus-circle-fill"></i></a></h2>
 			</div>
 	<div class="card-body" id="order-table">
 		<div>
