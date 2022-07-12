@@ -13,8 +13,12 @@
         $result = mysqli_query($connect,$query);
         
         if ($result) {
+<<<<<<< HEAD
             echo'Data inserted successfully';
             // header('location:orders.php');
+=======
+            header('location:orders.php');
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
         } else {
             die;
         }

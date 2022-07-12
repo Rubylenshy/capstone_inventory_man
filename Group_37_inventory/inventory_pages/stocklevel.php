@@ -21,12 +21,27 @@ session_start();
 	table thead th{
 		color: white;
 	}
+<<<<<<< HEAD
+=======
+	tbody a{
+		text-decoration: none;
+		color: white;
+	}
+	tbody a:hover{
+		text-decoration: none;
+		color: white;
+	}
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
 </style>
 </head>
 
 <div class="card">
 			<div class="card-header text-primary">
+<<<<<<< HEAD
 				<h2>Ingredient Stock Level <a href="" style="float:right;"><i class="bi bi-plus-circle-fill"></i></a></h2>
+=======
+				<h2>Ingredient Stock Level <a href="new_stocklevel.php" style="float:right;">ADD</a></h2>
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
 			</div>
 	<div class="card-body">
 		<div class="table-responsive">	
@@ -63,7 +78,11 @@ session_start();
 									<button type='button' class='btn btn-primary'>
 										<a href='update_stocklevel.php?update_id=".$id."'>Update</a>
 									</button>
+<<<<<<< HEAD
 									<button type='button' class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>
+=======
+									<button type='button' class='btn btn-danger'>
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
 										<a href='delete_stocklevel.php?delete_id=".$id."'>Delete</a>
 									</button>
 								</td>

@@ -30,22 +30,30 @@ session_start();
 		color: white;
 		text-decoration: none
 	}
+<<<<<<< HEAD
 	#a{
 		color: white;
 		text-decoration: none;
 	}
 	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+=======
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
 </style>
 				
 				
 <!-- Table -->
 <div class="card">
 			<div class="card-header text-primary">
+<<<<<<< HEAD
 				<h2>Purchase Orders <a href="new_orders.php" style="float:right;">ADD</a></h2>
+=======
+				<h2>Purchase Orders <a href="new_orders.php" style="float:right;">
+				<img src="../bootstrap/icons/plus-circle-fill.svg" width="35" height="35"></a></h2>
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
 			</div>
 	<div class="card-body" id="order-table">
 		<div class="table-responsive">	
-			<table class="table table-bordered table-stripped">
+			<table class="table table-bordered table-hover">
 				<thead>
 					<tr>
 						<th>Order ID</th>
@@ -86,8 +94,13 @@ session_start();
 									<button type='button' class='btn btn-primary'>
 										<a href='update_orders.php?update_id=".$id."'>Update</a>
 									</button>
+<<<<<<< HEAD
 									<button type='button' class='btn btn-danger' data-bs-target='#delete-modal' data-bs-toggle='modal'>
 										<a href='delete_orders.php?delete_id=".$id."'>Delete</a>
+=======
+									<button type='button' class='btn btn-danger'>
+										<a href='delete_orders.php?delete_orders_id=".$id."'>Delete</a>
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
 									</button>
 								</td>
 							</tr>";

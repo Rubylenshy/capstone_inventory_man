@@ -24,8 +24,12 @@
         $result = mysqli_query($connect,$query);
         
         if ($result) {
+<<<<<<< HEAD
             echo'successfully';
             // header('location:orders.php');
+=======
+           header('location:orders.php');
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
         } else {
             die;
         }
@@ -62,7 +66,11 @@
 
 <body>
     <div id="column">
+<<<<<<< HEAD
     <div class="container col-lg-6 bg-light" id="padding">
+=======
+    <div class="container col-lg-6 bg-light shadow-lg" id="padding">
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
         <h3 class="text-center">Order Form</h3>
         <form action="" method="post">
             <div class="form-group">

@@ -85,7 +85,11 @@ session_start();
 		<div class="text-center text-light padding">
 			<h3>Cheffings</h3>
 		</div>
+<<<<<<< HEAD
 	<div class="container col-lg-5 shadow " id="box">
+=======
+	<div class="container col-lg-5 shadow-lg" id="box">
+>>>>>>> aa0c9eb8af9088c003c986b6ac61a5e4268f0bc6
 		<form method="post">
 			<div style="font-size: 30px; text-align: center;color: black;">SIGN UP</div>
 					<div class="form-group">
